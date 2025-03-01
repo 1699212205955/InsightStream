@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/InsightStream/static/css/main.f59f3bd0.css",
+    "main.js": "/InsightStream/static/js/main.beb41d21.js",
+    "static/js/453.7580c2c9.chunk.js": "/InsightStream/static/js/453.7580c2c9.chunk.js",
+    "index.html": "/InsightStream/index.html",
+    "main.f59f3bd0.css.map": "/InsightStream/static/css/main.f59f3bd0.css.map",
+    "main.beb41d21.js.map": "/InsightStream/static/js/main.beb41d21.js.map",
+    "453.7580c2c9.chunk.js.map": "/InsightStream/static/js/453.7580c2c9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f59f3bd0.css",
+    "static/js/main.beb41d21.js"
+  ]
+}
