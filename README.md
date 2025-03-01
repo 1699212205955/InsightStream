@@ -46,7 +46,6 @@ npm -v
   "react-bootstrap": "^2.0.0",
   "react-icons": "^4.2.0",
   "react-router-dom": "^5.3.0",
-  ...
 }
 ```
 
