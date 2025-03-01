@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# Getting Started with InsightStream
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+To check if you have Node.js and npm installed, run the following commands in your terminal or command prompt:
 
-## Available Scripts
+```bash
+node -v
+npm -v
+```
 
-In the project directory, you can run:
+## Steps to Create a React App
 
-### `npm start`
+1. Open your terminal or command prompt.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. **Use Create React App:** You can create a new React app using the following command. Replace `my-app` with your desired project name.
+```bash
+    npx create-react-app my-app
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. **Navigate to the project directory:** Change into the newly created project directory.
+```bash
+    cd my-app
+```
 
-### `npm test`
+4. **Start the development server:** Run the following command to start the development server.
+```bash
+    npm start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5. **Open the project in your browser:** Open your web browser and navigate to `http://localhost:3000`.
 
-### `npm run build`
+## Steps to Create a React App with InsightStream
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. After created the react app delete the old src folder and replace the existing src folder.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Install the required packages by running the following command in your terminal or command prompt.
+```bash
+    npm install react-router-dom axios react-bootstrap bootstrap react-icons
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Verify Installation:** After running the installation command, you should see the packages listed in your package.json file under dependencies. It should look something like this:
 
-### `npm run eject`
+```json
+"dependencies": {
+  "axios": "^0.21.1",
+  "bootstrap": "^5.1.3",
+  "react-bootstrap": "^2.0.0",
+  "react-icons": "^4.2.0",
+  "react-router-dom": "^5.3.0",
+  ...
+}
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. **Restart Your Development Server:** After installing the packages, restart your development server to ensure that the changes take effect.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+    npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## To host a React app using GitHub
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. **Install gh-pages Package:**
+    Install the gh-pages package in the current directory to facilitate deployment.
+```bash
+    npm install gh-pages --save-dev
+```
 
-## Learn More
+2. **Configure `package.json`:**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
++ Add a homepage property to your package.json.
+```json
+"homepage": "http://your-username.github.io/my-app"
+```
++ Add deployment scripts to the `scripts` section.
+```json
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+}
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. **Build and Deploy:**
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
++ Run the following command to deploy your app.
+```bash
+    npm run deploy
+```
